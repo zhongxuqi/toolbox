@@ -1,0 +1,95 @@
+set nocompatible              " be iMproved, required
+filetype off                  " required
+
+" set the runtime path to include Vundle and initialize
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+" alternatively, pass a path where Vundle should install plugins
+"call vundle#begin('~/some/path/here')
+
+" let Vundle manage Vundle, required
+Plugin 'VundleVim/Vundle.vim'
+
+Plugin 'kien/ctrlp.vim'
+Plugin 'scrooloose/nerdtree'
+Plugin 'Valloric/YouCompleteMe'
+Plugin 'fatih/vim-go'
+Plugin 'mkitt/tabline.vim'
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+Plugin 'pangloss/vim-javascript'
+Plugin 'mxw/vim-jsx'
+Plugin 'scrooloose/nerdcommenter'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'kristijanhusak/vim-hybrid-material'
+Plugin 'w0ng/vim-hybrid'
+Plugin 'leafgarland/typescript-vim'
+
+" theme package
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'dracula/vim'
+
+" All of your Plugins must be added before the following line
+call vundle#end()            " required
+filetype plugin indent on    " required
+" To ignore plugin indent changes, instead use:
+"filetype plugin on
+"
+" Brief help
+" :PluginList       - lists configured plugins
+" :PluginInstall    - installs plugins; append `!` to update or just
+" :PluginUpdate
+" :PluginSearch foo - searches for foo; append `!` to refresh local cache
+" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
+"
+" see :h vundle for more details or wiki for FAQ
+" Put your non-Plugin stuff after this line
+
+" global config
+syntax enable
+set backspace=2
+set laststatus=2
+
+" turn on color theme
+set background=dark
+" let g:solarized_termcolors=256
+" colorscheme solarized
+colorscheme hybrid_material
+
+" Plugin Config
+let g:ctrlp_map = '<c-p>'
+let g:ctrlp_cmd = 'CtrlP'
+
+" airline
+let g:airline_theme='simple'
+
+map <C-n> :NERDTreeToggle<cr>
+cmap <C-n> :NERDTreeToggle<cr>
+
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_fmt_command = "goreturns"
+
+" my config
+set nu
+set cursorline cursorcolumn
+
+" set tab size to 4 and 1 tab to 4 space
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+
+" set mouse=a " set mouse enable
+
+map <S-q> :tabp<cr>
+map <S-w> :tabn<cr>
+
+" react
+let g:jsx_ext_required = 0
+"let g:jsx_pragma_required = 1
+
