@@ -65,6 +65,8 @@ let g:airline_theme='simple'
 
 map <C-n> :NERDTreeToggle<cr>
 cmap <C-n> :NERDTreeToggle<cr>
+map <C-k> :NERDTreeFind<cr>
+cmap <C-k> :NERDTreeFind<cr>
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
