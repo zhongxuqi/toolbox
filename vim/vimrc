@@ -51,7 +51,6 @@ set backspace=2
 set laststatus=2
 
 " turn on color theme
-let g:hybrid_custom_term_colors = 1
 set background=dark
 " let g:solarized_termcolors=256
 " colorscheme solarized
