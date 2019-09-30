@@ -14,15 +14,9 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'ycm-core/YouCompleteMe'
 Plugin 'fatih/vim-go'
-Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-Plugin 'pangloss/vim-javascript'
-Plugin 'mxw/vim-jsx'
 Plugin 'scrooloose/nerdcommenter'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'w0ng/vim-hybrid'
-Plugin 'leafgarland/typescript-vim'
 Plugin 'rust-lang/rust.vim'
 
 " theme package
@@ -48,14 +42,13 @@ filetype plugin indent on    " required
 syntax enable
 set backspace=2
 set laststatus=2
+set encoding=utf-8
 
 " turn on color theme
-" set background=dark
-" let g:solarized_termcolors=256
-" colorscheme solarized
+let g:dracula_italic = 0
 colorscheme dracula
 set termguicolors
-"hi Normal guibg=NONE ctermbg=NONE
+hi Normal guibg=NONE ctermbg=NONE
 
 " Plugin Config
 let g:ctrlp_map = '<c-p>'
@@ -64,7 +57,6 @@ let g:ctrlp_cmd = 'CtrlP'
 " airline
 let g:airline_theme = "bubblegum"
 let g:airline_powerline_fonts = 1
-let g:airline#extensions#tabline#enabled = 1
 let g:airline_left_sep = ''
 let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
@@ -74,6 +66,11 @@ map <C-n> :NERDTreeToggle<cr>
 cmap <C-n> :NERDTreeToggle<cr>
 map <C-k> :NERDTreeFind<cr>
 cmap <C-k> :NERDTreeFind<cr>
+
+" tabline
+let g:airline#extensions#tabline#enabled = 1
+let g:airline#extensions#tabline#left_sep = ' '
+let g:airline#extensions#tabline#formatter = 'default'
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -93,17 +90,6 @@ set tabstop=4
 set shiftwidth=4
 set expandtab
 set smartindent
-
-" set mouse=a " set mouse enable
-
-map <S-q> :tabp<cr>
-map <S-w> :tabn<cr>
-
-" react
-let g:jsx_ext_required = 0
-"let g:jsx_pragma_required = 1
-
-set completeopt-=preview
 
 " rust
 let g:rustfmt_autosave = 1
