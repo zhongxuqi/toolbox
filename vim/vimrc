@@ -48,7 +48,6 @@ set encoding=utf-8
 let g:dracula_italic = 0
 colorscheme dracula
 set termguicolors
-hi Normal guibg=NONE ctermbg=NONE
 
 " Plugin Config
 let g:ctrlp_map = '<c-p>'
