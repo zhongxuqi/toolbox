@@ -12,7 +12,7 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'kien/ctrlp.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'Valloric/YouCompleteMe'
+Plugin 'ycm-core/YouCompleteMe'
 Plugin 'fatih/vim-go'
 Plugin 'mkitt/tabline.vim'
 Plugin 'vim-airline/vim-airline'
@@ -21,12 +21,11 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'mxw/vim-jsx'
 Plugin 'scrooloose/nerdcommenter'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'kristijanhusak/vim-hybrid-material'
 Plugin 'w0ng/vim-hybrid'
 Plugin 'leafgarland/typescript-vim'
+Plugin 'rust-lang/rust.vim'
 
 " theme package
-Plugin 'altercation/vim-colors-solarized'
 Plugin 'dracula/vim'
 
 " All of your Plugins must be added before the following line
@@ -51,29 +50,38 @@ set backspace=2
 set laststatus=2
 
 " turn on color theme
-set background=dark
+" set background=dark
 " let g:solarized_termcolors=256
 " colorscheme solarized
-colorscheme hybrid_material
+colorscheme dracula
+set termguicolors
+"hi Normal guibg=NONE ctermbg=NONE
 
 " Plugin Config
 let g:ctrlp_map = '<c-p>'
 let g:ctrlp_cmd = 'CtrlP'
 
 " airline
-let g:airline_theme = "hybrid"
+let g:airline_theme = "bubblegum"
+let g:airline_powerline_fonts = 1
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
 
 map <C-n> :NERDTreeToggle<cr>
 cmap <C-n> :NERDTreeToggle<cr>
 map <C-k> :NERDTreeFind<cr>
 cmap <C-k> :NERDTreeFind<cr>
 
-"let g:go_highlight_functions = 1
-"let g:go_highlight_methods = 1
-"let g:go_highlight_fields = 1
-"let g:go_highlight_types = 1
-"let g:go_highlight_operators = 1
-"let g:go_highlight_build_constraints = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_methods = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_types = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_build_constraints = 1
+let g:go_highlight_function_calls = 1
 let g:go_fmt_command = "goimports"
 
 " my config
@@ -96,3 +104,6 @@ let g:jsx_ext_required = 0
 "let g:jsx_pragma_required = 1
 
 set completeopt-=preview
+
+" rust
+let g:rustfmt_autosave = 1
