@@ -62,15 +62,11 @@ let g:airline_left_alt_sep = ''
 let g:airline_right_sep = ''
 let g:airline_right_alt_sep = ''
 
-map <C-n> :NERDTreeToggle<cr>
-cmap <C-n> :NERDTreeToggle<cr>
-map <C-k> :NERDTreeFind<cr>
-cmap <C-k> :NERDTreeFind<cr>
-
 " tabline
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#tabline#left_sep = ' '
 let g:airline#extensions#tabline#formatter = 'default'
+let g:airline#extensions#tabline#tab_nr_type = 1
 
 let g:go_highlight_functions = 1
 let g:go_highlight_methods = 1
@@ -93,3 +89,9 @@ set smartindent
 
 " rust
 let g:rustfmt_autosave = 1
+
+" shortcuts
+map <C-n> :NERDTreeToggle<cr>
+cmap <C-n> :NERDTreeToggle<cr>
+map <C-k> :NERDTreeFind<cr>
+cmap <C-k> :NERDTreeFind<cr>
